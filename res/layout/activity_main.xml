@@ -26,7 +26,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:padding="10dp"
-        android:text="Player One"
+        android:text="Timur"
         android:textAlignment="center"
         android:textSize="30dp" >
     </EditText>
