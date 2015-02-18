@@ -35,6 +35,16 @@ public class DBManager {
 		db.execSQL("INSERT INTO RESULTS VALUES ('" + username + "', " + score
 				+ ");");
 	}
+	int sumScore()
+	{
+	String query = "SELECT SUM (SCORE) * FROM RESULTS;";
+	Cursor cursor = db.rawQuery(query, null);
+	cursor.moveToFirst();
+	String score = cursor.getString(cursor.getColumnIndex("SCORE"));
+	return Integer.parseInt(score);
+	
+
+	}
 
 	ArrayList<Result> getAllResults() {
 
